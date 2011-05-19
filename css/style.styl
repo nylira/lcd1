@@ -1,6 +1,19 @@
 @import 'm/all'
 @import 'd/all'
 
+linkh = 202
+link = hsl(linkh,100,50)
+hover = hsl(linkh,100,65)
+
+grad()
+  background linear-gradient(top, hover, link)
+
+a
+  text-decoration none
+  color link
+  &:hover
+    color hover
+
 m = 14px
 
 dfont()
@@ -9,8 +22,142 @@ dfont()
   ff sans
   color #333
 
+html
+  height 100%
 body
   dfont()
-  bg #fff
-  overflow-y scroll
-  bgg #f00 #000
+  background linear-gradient(top, m235 0%, m245 20%)
+  position relative
+  height 100%
+
+  header.site
+    height 4em
+    lh 4em
+    background linear-gradient(top, m240 0%, m230 85%, m220 100%)
+
+    h1
+      float left
+      mar 0 1em
+      pad 0 1em
+      a
+        display block
+        color #666
+        font bold 1.25em/3.2 sans
+        font-smoothing()
+
+    menu
+      ul
+        li
+          display inline-block
+          mr .8em
+          a
+            button()
+      &.actions
+        float left
+      &.settings
+        float right
+
+  .container
+    bt 1px solid #fff
+    pad 1em 2em
+
+    header
+      lh 3em
+      pad 0 1em
+      clearfix()
+      grad()
+      border-radius 3px
+      mb 1em
+      h1
+        float left
+        font 125% sans
+        lh m*3
+        color w70
+        strong
+          fw bold
+          color #fff
+
+      menu 
+        float right
+        ul li a
+          button()
+          box-shadow w10 0 0 10px
+
+    .video
+      width 640px
+      display table-cell
+      relative()
+      .you
+        width 120px
+        height 90px
+        bg m160
+        absolute top 0 left 0
+        p
+          font bold 2em/90px sans
+          text-align center
+          color m127
+        
+      .embed
+        width 640px
+        height 480px
+        bg m127
+        p
+          font bold 6em/480px sans
+          color m150
+          text-align center
+
+    .msg.box
+      display table-cell
+      vertical-align top
+      pl 1%
+      width 99%
+      position relative
+
+      ul.msgs
+        border 1px solid #ddd
+        bg #fff
+        width 100%
+        overflow-y scroll
+        height 400px
+        
+        li.msg
+          pad .5em 1em
+          &:hover
+            bg hsl(linkh,80,97)
+
+          &:not(:last-of-type)
+            bb 1px dashed #eee
+
+          p.msg
+            display table-cell
+            &.author
+              width 15%
+            &.body
+              width 80%
+            &.date
+              width 5%
+              color #999
+      form
+        bg #fff
+        pad 1em
+        box-sizing border-box
+        background linear-gradient(top, m220, m180)
+        height 80px
+        input
+          display inline-block
+          box-sizing border-box
+          &[type=text]
+            width 85%
+            mar 0
+            pad 0
+            border none
+            box-shadow inset b15 2px 2px 5px, w30 0 1px 0
+            border 1px solid b30
+            border-radius 3px
+            lh m*2 - 3px
+          &[type=submit]
+            button()
+            width 14%
+            ml 1%
+            box-shadow w30 0 1px 0
+            background linear-gradient(top, m250, m220)

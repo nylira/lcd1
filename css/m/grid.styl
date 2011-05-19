@@ -11,7 +11,7 @@ span()
 cnt(arguments = 10)
   span arguments
   mar 0 auto
-  clear()
+  clearfix()
 
 col() 
   span arguments
@@ -25,3 +25,14 @@ colm()
 colp()
   col arguments-gutter
   padding 0 gut
+
+clearfix()
+  &:before
+  &:after
+    content: "\0020"
+    display: block
+    height: 0
+    overflow: hidden
+  &:after
+    clear: both
+  zoom: 1

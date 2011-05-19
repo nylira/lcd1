@@ -6,28 +6,22 @@ lucida = 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif
 button()
   border none
   display inline-block
-  border 1px solid b40
+  border 1px solid m200
   border-radius 3px
   cursor pointer
-  pad 0 .7em
+  pad 0 .8em
   dfont()
   lh m*2px - 3px
-  text-shadow b50 0 0 5px
-  background linear-gradient(top, m70 0%, m55 100%)
-  box-shadow inset w10 0 0 3px, w8 0 1px 0
+  text-shadow w60 0 1px 0
+  background linear-gradient(top, m245 0%, m215 100%)
+  background linear-gradient(top, m245 0%, m215 100%)
+  box-shadow inset w10 0 0 3px, w60 0 1px 0
   color txt
   &:hover
-    background linear-gradient(top, m75 0%, m65 100%)
+    background linear-gradient(top, m250 0%, m220 100%)
   &:active
-    background linear-gradient(top, m50 0%, m65 100%)
-  &.disabled
-    cursor default
-    opacity .75
-    &:hover
-      background linear-gradient(top, m80 0%, m60 100%)
-  &[disabled]:active, &[disabled]:hover
-    background #EEEEEE
-
+    background linear-gradient(bottom, m235 0%, m210 100%)
+  
 ir()
   display block
   text-indent -999em
@@ -74,8 +68,8 @@ be()
   bt arguments
   bb arguments
 
-bx(t = 1px solid #fff, r = 1px solid #999, b = 1px solid #000, l = 1px solid666)
-  bt t
-  br r
-  bb b
-  bl l
+bx(t = #fff, r = #999, b = #000, l = #666)
+  bt 1px solid t
+  br 1px solid r
+  bb 1px solid b
+  bl 1px solid l
